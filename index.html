@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 1 Final Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-blue-800 py-6">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold">Group 1 Final Project</h1>
+            <p class="mt-2 text-lg md:text-xl text-gray-300">Celebrating Our Collaborative Success</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12 flex-grow">
+        <section class="text-center">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-8">Our Team</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="fade-in bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-medium">Darko Kennedy</h3>
+                </div>
+                <div class="fade-in bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-medium">Ikenna Enyidede</h3>
+                </div>
+                <div class="fade-in bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-medium">Michael Ankomah Asimeng</h3>
+                </div>
+                <div class="fade-in bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-medium">Haruna Obeng</h3>
+                </div>
+                <div class="fade-in bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-medium">Justice Kamassah</h3>
+                </div>
+                <div class="fade-in bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-medium">Maxwell Kamassah</h3>
+                </div>
+                <div class="fade-in bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-medium">Kofi Danquah Donkoh</h3>
+                </div>
+                <div class="fade-in bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-medium">Brenny-Lona Sowason</h3>
+                </div>
+            </div>
+        </section>
+        <section class="text-center mt-12">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-4">Acknowledgments</h2>
+            <p class="text-lg text-gray-300">Special thanks to our instructor, Shadrach, for his guidance and support.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">&copy; 2025 Group 1 Final Project. Powered by Thrive Africa.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for fade-in animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add('visible');
+                }, index * 100); // Staggered animation
+            });
+        });
+    </script>
+</body>
+</html>
